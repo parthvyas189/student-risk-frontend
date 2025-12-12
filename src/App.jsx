@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import LoginPage from './pages/LoginPage';
 import DashboardLayout from './layouts/DashboardLayout';
+import TeacherDashboard from './pages/TeacherDashboard'; // <-- Import
 
-// Placeholders
-const Dashboard = () => <div className="text-2xl font-bold">📊 Dashboard Coming Soon</div>;
+// Keep other placeholders for now
 const WeeklyUpdates = () => <div className="text-2xl font-bold">📝 Update Form Coming Soon</div>;
 const Students = () => <div className="text-2xl font-bold">🎓 Student List Coming Soon</div>;
 
@@ -15,7 +15,8 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         
         <Route element={<DashboardLayout />}>
-          <Route path="/dashboard" element={<Dashboard />} />
+          {/* Use the new TeacherDashboard here */}
+          <Route path="/dashboard" element={<TeacherDashboard />} />
           <Route path="/updates" element={<WeeklyUpdates />} />
           <Route path="/students" element={<Students />} />
         </Route>
